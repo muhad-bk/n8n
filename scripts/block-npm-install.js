@@ -1,7 +1,7 @@
 const { npm_config_user_agent: UA } = process.env;
 const [packageManager] = (UA ?? '').split(' ');
 const [name, version] = packageManager.split('/');
-if (name !== 'pnpm') {
+if (!['pnpm','bun'].includes(name)) {
 	const suggestion = '\033[1;92mpnpm\033[0;31m';
 	console.error('\033[0;31m');
 	console.error('╭───────────────────────────────────────────╮');

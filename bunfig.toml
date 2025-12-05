@@ -1,0 +1,21 @@
+[install]
+# 4320 seconds = 72 minutes (same as your pnpm config)
+minimumReleaseAge = 4320
+
+# Exclude specific packages from minimumReleaseAge
+minimumReleaseAgeExcludes = [
+  "@n8n/*",
+  "@n8n_io/*",
+  "tsdown@0.16.5",
+  "eslint-plugin-storybook",
+  "@langchain/*",
+  "langchain",
+  "@anthropic-ai/sdk",
+  "@google/generative-ai",
+  "@google/genai",
+  "body-parser",
+  "node-forge",
+]
+
+# Optional: behave more like pnpm (no hoisting)
+linker = "isolated"
